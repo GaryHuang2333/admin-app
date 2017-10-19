@@ -50,8 +50,7 @@
 
 Run  `git clone https://github.com/GaryHuang2333/admin-app.git` to pull project from github
 
-Run `ng install` to install the application
-
+Run `npm install` inside Folder `/admin-app` to install the application
 
 ## Development server
 
