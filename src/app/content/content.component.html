@@ -22,10 +22,14 @@
           Content 1
       </p-tabPanel>
       <p-tabPanel header="Header 2" [closable]="true">
-          Content 2
+        <ng-template pTemplate="content">
+          Content 2 to Lazy Load
+        </ng-template>
       </p-tabPanel>
       <p-tabPanel header="Header 3" [closable]="true">
-          Content 3    
+        <ng-template pTemplate="content">
+          Content 3 to Lazy Load
+        </ng-template>
       </p-tabPanel>
     </p-tabView>
 
