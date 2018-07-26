@@ -21,6 +21,7 @@
               "src/favicon.ico"
             ],
             "styles": [
+              "node_modules/ng-zorro-antd/src/ng-zorro-antd.min.css",
               "src/styles.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/admin-lte/dist/css/AdminLTE.min.css",
@@ -83,6 +84,7 @@
               "node_modules/admin-lte/dist/js/adminlte.min.js"
             ],
             "styles": [
+              "node_modules/ng-zorro-antd/src/ng-zorro-antd.min.css",
               "src/styles.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/admin-lte/dist/css/AdminLTE.min.css",
