@@ -14,9 +14,13 @@
   <!-- Main content -->
   <section class="content container-fluid">
 
-    <!--------------------------
-      | Your Page Content Here |
-      -------------------------->
+    <nz-tabset [nzType]="'card'">
+      <nz-tab *ngFor="let tab of tabs" [nzTitle]="titleTemplate">
+        <ng-template #titleTemplate>
+          <div>{{ tab }}<i *ngIf="tab != 'Home'" class="anticon anticon-close" (click)="closeTab(tab)"></i></div>
+        </ng-template>
+      </nz-tab>
+    </nz-tabset>
 
   </section>
   <!-- /.content -->

@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 
@@ -14,6 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgZorroAntdModule, NZ_I18N, zh_CN } from 'ng-zorro-antd';
 import { registerLocaleData } from '@angular/common';
 import zh from '@angular/common/locales/zh';
+import { TabsService } from './service/tabs.service';
+import { BackendInterceptor } from './_interceptor/backend-interceptor';
 
 registerLocaleData(zh);
 
@@ -31,9 +34,13 @@ registerLocaleData(zh);
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
-    NgZorroAntdModule,
+    NgZorroAntdModule
   ],
-  providers: [{ provide: NZ_I18N, useValue: zh_CN }],
+  providers: [
+    { provide: NZ_I18N, useValue: zh_CN },
+    TabsService,
+    { provide: HTTP_INTERCEPTORS, useClass: BackendInterceptor, multi: true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
